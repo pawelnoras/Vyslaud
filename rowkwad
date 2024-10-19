@@ -1,0 +1,60 @@
+
+#include <iostream>
+using namespace std;
+#include<cmath>
+int main()
+{
+    int a;
+    int b; 
+    int c; 
+    int wynik;
+    
+    //wzor na delte (rownanie kwadratowe);
+    
+    cout << "podaj liczbe a: " << endl;
+    cin >> a;
+    if (a==0){
+        cout << "podaj prawidlowe dane, liczby nie moga byc rowne 0" << endl;
+        return 0;
+    }
+    cout << "podaj liczbe b: " << endl;
+    cin >> b;
+    if (b==0){
+        cout << "podaj prawidlowe dane, liczby nie moga byc rowne 0" << endl;
+        return 0;
+    }
+    cout << "podaj liczbe c: " << endl;
+    cin >> c;
+    if (c==0){
+        cout << "podaj prawidlowe dane, liczby nie moga byc rowne 0" << endl;
+        return 0;
+    }
+    
+    
+    int delta = (b*b - 4*a*c);
+    
+    
+    //cin>>delta;
+  
+    if(delta>0){
+        cout << "delta jest wieksza od zera, zatem wynik x1 jest rowny: " << 
+        (-b- sqrt(delta))/(2*a)<<endl;
+        cout << "delta jest wieksza od zera, zatem wynik x2 jest rowny: " << 
+        (-b + sqrt(delta))/(2*a) <<endl;
+        return 0;
+    }
+    if(delta==0){
+        cout << "twoja delta jest rowna zero, zatem: " << wynik<< (b/2*a) << endl;
+        return 0;
+    }
+    if(delta<0){
+        cout << "twoja delta jest mniejsza od zera, zatem nie ma rozwiazan" << endl; 
+        return 0;
+    }
+ 
+    
+    
+    cin >> wynik;
+    
+    return 0;
+}
